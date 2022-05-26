@@ -29,8 +29,6 @@ const toDoList = new Vue ({
 
     data : {
 
-        nuovaClasse : "text_barrato",
-
         toDo : [
 
             {
@@ -65,13 +63,16 @@ const toDoList = new Vue ({
 
             {
                 text : "Studiare e svolgere esercizio pomeridiano",
-                done : true
+                done : false
             },
         ]
     },
 
     methods : {
-      
+
+        removeItemList(i){
+            this.toDo.splice(i, 1);
+        }
     }
 
 })
