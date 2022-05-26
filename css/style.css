@@ -4,34 +4,51 @@
     box-sizing: border-box;
 }
 
-h2 {
+header {
+    width: 50%;
+    margin: auto;
+    height: 100px;
+    font-size: 20px;
+    padding-top: 40px;
+    background-color: black;
     text-align: center;
+    color: white;
 }
 
 .myList {
-    margin-top: 20px;
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
 }
 
 .myInput {
-    text-align: center;
-}
-
-input {
-    width: 400px;
-    margin-bottom: 20px;
-}
-
-.myUl {
-    width: 45%;
-    margin: auto;
-}
-
-.myLi {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+}
+
+.myInput input {
+    height: 40px;
+    width: 60%;
+}
+
+.myInput button {
+    width: 35%;
+}
+
+.myLista {
+    padding-top: 20px;
+}
+
+.displayLista {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
 }
 
 .text_barrato {
     text-decoration: line-through;
+}
+
+h3 {
+    text-align: center;
 }
