@@ -19,12 +19,13 @@
         </div>
 
         <div class="myUl">
-            <ul>
-                <li class="myLi" v-for="(item, index) in toDo" :key="index" v-if="(item.done === true) ? ':class='nuovaClasse'' : '' ">
+            <ul v-if="toDo.length > 0">
+                <li class="myLi" v-for="(item, index) in toDo" :key="index" :class="(item.done === true) ? 'text_barrato' : '' ">
                     {{ item.text }}
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times" @click="removeItemList(index)"></i>
                 </li>
             </ul>
+            <h3 v-else>Bravo!!!Per oggi hai fatto tutto</h3>
         </div>
 
     </div>
