@@ -10,22 +10,25 @@
 </head>
 <body>
     
-    <h2>Cose da fare durante la giornata</h2>
+    <header>
+        Lista della spesa
+    </header>
+
     <div id="myList" class="myList">
 
         <div class="myInput">
-            <input type="text" placeholder="Aggiungo un altra cosa da fare oggi" v-model="anotherDo" @keyup.enter="addToDo">
-            <button @click="addToDo">Aggiungi nella lista</button>
+            <input type="text" placeholder="Scrivi un altro prodotto" v-model="anotherDo" @keyup.enter="addToDo">
+            <button @click="addToDo">Aggiungi alla lista</button>
         </div>
 
-        <div class="myUl">
-            <ul v-if="toDo.length > 0">
-                <li class="myLi" v-for="(item, index) in toDo" :key="index" :class="(item.done === true) ? 'text_barrato' : '' " @click="changeDone(index)">
+        <div class="myLista">
+            <div v-if="toDo.length > 0">
+                <div class="displayLista" v-for="(item, index) in toDo" :key="index" :class="(item.done === true) ? 'text_barrato' : '' " @click="changeDone(index)">
                     {{ item.text }}
                     <i class="fas fa-times" @click="removeItemList(index)"></i>
-                </li>
-            </ul>
-            <h3 v-else>Bravo!!!Per oggi hai fatto tutto</h3>
+                </div>
+            </div>
+            <h3 v-else>Bravo!!!Hai comprato tutto.</h3>
         </div>
 
     </div>
