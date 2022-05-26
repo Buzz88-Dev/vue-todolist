@@ -65,14 +65,23 @@ const toDoList = new Vue ({
                 text : "Studiare e svolgere esercizio pomeridiano",
                 done : false
             },
-        ]
+        ],
+
+        anotherDo : "",
     },
 
     methods : {
 
         removeItemList(i){
             this.toDo.splice(i, 1);
-        }
+        },
+
+        addToDo : function(){
+            if (this.anotherDo !== "") {
+                this.toDo.push({text: this.anotherDo, done: false})
+            }
+            this.anotherDo = "";
+        },
     }
 
 })
