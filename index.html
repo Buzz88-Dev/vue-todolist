@@ -14,13 +14,13 @@
     <div id="myList" class="myList">
 
         <div class="myInput">
-            <input type="text" placeholder="Aggiungo un altra cosa da fare oggi" v-model="anotherDo">
+            <input type="text" placeholder="Aggiungo un altra cosa da fare oggi" v-model="anotherDo" @keyup.enter="addToDo">
             <button @click="addToDo">Aggiungi nella lista</button>
         </div>
 
         <div class="myUl">
             <ul v-if="toDo.length > 0">
-                <li class="myLi" v-for="(item, index) in toDo" :key="index" :class="(item.done === true) ? 'text_barrato' : '' ">
+                <li class="myLi" v-for="(item, index) in toDo" :key="index" :class="(item.done === true) ? 'text_barrato' : '' " @click="changeDone(index)">
                     {{ item.text }}
                     <i class="fas fa-times" @click="removeItemList(index)"></i>
                 </li>
