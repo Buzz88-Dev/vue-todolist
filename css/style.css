@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+.myList {
+    margin-top: 20px;
+}
+
+.myInput {
+    text-align: center;
+}
+
+input {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.myUl {
+    width: 45%;
+    margin: auto;
+}
+
+.myLi {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
