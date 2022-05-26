@@ -83,13 +83,24 @@ const toDoList = new Vue ({
             this.anotherDo = "";
         },
 
-        changeDone(id) {
-            if (this.toDo.done[id] === false){
-                this.done = true;
+        changeDone(i) {
+            if (this.toDo[i].done === false){
+                this.toDo[i].done = true;
             } else {
-                this.done = false;
+                this.toDo[i].done = false;
             }
-        }
+        },
+
+        // metodo alternativo
+        // in html: @click="changeDone(item)"
+        // in js: 
+        //       changeDone(elem) {
+        //          if (elem.done === false){
+        //              elem.done = true;
+        //          } else {
+        //              elem.done = false;
+        //          }
+        //}
     }
 
 })
