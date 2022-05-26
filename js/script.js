@@ -82,6 +82,14 @@ const toDoList = new Vue ({
             }
             this.anotherDo = "";
         },
+
+        changeDone(id) {
+            if (this.toDo.done[id] === false){
+                this.done = true;
+            } else {
+                this.done = false;
+            }
+        }
     }
 
 })
