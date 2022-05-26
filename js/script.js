@@ -32,37 +32,57 @@ const toDoList = new Vue ({
         toDo : [
 
             {
-                text : "Svegliarsi e fare la doccia",
+                text : "Pane",
                 done : true
             },
 
             {
-                text : "Accendere il computer",
+                text : "Latte",
                 done : true
             },
 
             {
-                text : "Preparare la colazione",
+                text : "Biscotti",
                 done : false
             },
 
             {
-                text : "Seguire lezione Boolean",
+                text : "Marmellata",
                 done : true
             },
 
             {
-                text : "Preparare il pranzo",
+                text : "Insalata",
                 done : true
             },
 
             {
-                text : "Lavare i piatti",
+                text : "Pasta",
                 done : false
             },
 
             {
-                text : "Studiare e svolgere esercizio pomeridiano",
+                text : "Bistecche di pollo",
+                done : false
+            },
+
+            {
+                text : "Birre",
+                done : false
+            },
+
+            {
+                text : "Patatine",
+                done : false
+            },
+
+            {
+                text : "Filetto di salmone",
+                done : false
+            },
+
+            {
+                text : "Mozzarella",
                 done : false
             },
         ],
