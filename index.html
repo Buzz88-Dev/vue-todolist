@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Vue To Do List</title>
 </head>
 <body>
     
     <h2>Cose da fare durante la giornata</h2>
-    <div id="lista" class="myList">
+    <div id="myList" class="myList">
 
         <div class="myInput">
             <input type="text" placeholder="Aggiungo un altra cosa da fare oggi">
@@ -20,8 +20,8 @@
 
         <div class="myUl">
             <ul>
-                <li class="myLi">
-                    
+                <li class="myLi" v-for="(item, index) in toDo" :key="index" v-if="(item.done === true) ? ':class='nuovaClasse'' : '' ">
+                    {{ item.text }}
                     <i class="fas fa-times"></i>
                 </li>
             </ul>
@@ -32,6 +32,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script type="text/javascript" src="js/scritp.js"></script>
+    <script type="text/javascript" src="js/script.js"></script> 
 </body>
 </html>
